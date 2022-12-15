@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Login Template</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="button_sign_in">MASUK</string>
+    <string name="button_sign_up">DAFTAR</string>
+    <string name="button_send">Send</string>
+    <string name="text_forgot_password">Forgot password?</string>
+    <string name="text_signin_message">Hai, Selamat datang kembali!</string>
+    <string name="text_signup_signin">Sudah mempunyai akun? <u>Masuk disini</u></string>
+    <string name="text_signin_signup">Belum mempunyai akun? <u>Daftar disini</u></string>
+    <string name="text_signup_terms">By signing up, you agree to our <b>terms and conditions</b></string>
+    <string name="text_signup_message">Yuk, daftarkan dirimu di Laundry Aje!</string>
+
+    <string name="text_forgot_password_title">Forgot password? No worries</string>
+    <string name="text_forgot_password_message">We will send you a link to reset your password</string>
+
+    <string name="hint_email">NIK</string>
+    <string name="hint_phone">Nama Lengkap</string>
+    <string name="hint_address">Alamat Rumah</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+</resources>
