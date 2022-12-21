@@ -18,6 +18,13 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">false</item>
     </style>
+    <style name="Button2" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/button2_bg</item>
+        <item name="android:minWidth">200dp</item>
+        <item name="android:textColor">@color/color_2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
     <style name="TextyButton" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:textAllCaps">false</item>
     </style>

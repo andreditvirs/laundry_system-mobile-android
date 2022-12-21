@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -56,7 +57,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             }
             case R.id.btn_login:{
-                login(view);
+                this.login(view);
                 break;
             }
         }
@@ -78,9 +79,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             String error_msg = data.getString("error_msg");
                             Toast.makeText(getApplicationContext(), error_msg, Toast.LENGTH_LONG).show();
                         }else{
-                            System.out.println("LOG DATA USER "+ data.get("user"));
+                            JSONObject dataUser = data.getJSONObject("user");
+                            String name = dataUser.getString("name");
+                            String nik = dataUser.getString("nik");
+                            String username = dataUser.getString("username");
+                            String role = dataUser.getString("role");
+                            String address = dataUser.getString("address");
+                            String latitude = dataUser.getString("latitude");
+                            String longitude = dataUser.getString("longitude");
 
                             // shared preferences
+                            SharedPreferences sharedPreferences = getSharedPreferences("uwika-laundry-aje",MODE_PRIVATE);
+                            SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                            myEdit.putString("profile_nik", nik);
+                            myEdit.putString("profile_name", name);
+                            myEdit.putString("profile_username", username);
+                            myEdit.putString("profile_role", role);
+                            myEdit.putString("profile_address", address);
+                            myEdit.putString("profile_latitude", latitude);
+                            myEdit.putString("profile_longitude", longitude);
+                            myEdit.commit();
+
                             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                             startActivity(intent);
                             finish();

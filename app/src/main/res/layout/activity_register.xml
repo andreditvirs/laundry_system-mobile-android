@@ -11,8 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:fillViewport="true"
-        android:fitsSystemWindows="true"
-        tools:context="in.insideandroid.template.LoginActivity">
+        android:fitsSystemWindows="true">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -60,7 +59,7 @@
                     app:cardElevation="0dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_email"
+                        android:id="@+id/et_nik"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -94,7 +93,7 @@
                         app:hintEnabled="false">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/et_phone"
+                            android:id="@+id/et_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -224,9 +223,9 @@
                     android:padding="8dp"
                     android:text="@string/text_signup_terms" />
                 <Button
-                    android:id="@+id/button_signin"
+                    android:id="@+id/btn_register"
                     style="@style/Button1"
-                    android:layout_width="342dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
